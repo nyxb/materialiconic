@@ -126,12 +126,18 @@ export const folderIcons: FolderTheme[] = [
                '.githooks',
                'submodules',
                '.submodules',
+            ],
+         },
+         {
+            name: 'folder-github',
+            folderNames: [
+               '.github',
+               'github',
                'ISSUE_TEMPLATE',
                'PULL_REQUEST_TEMPLATE',
                'workflows',
             ],
          },
-         { name: 'folder-github', folderNames: ['.github', 'github'] },
          { name: 'folder-gitlab', folderNames: ['.gitlab'] },
          { name: 'folder-vscode', folderNames: ['.vscode', '.vscode-test'] },
          {
