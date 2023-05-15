@@ -1,6 +1,29 @@
 # Changelog
 
 
+## v0.0.2...main
+
+[compare changes](https://github.com/nyxblabs/materialiconic/compare/v0.0.2...main)
+
+
+### 🚀 Enhancements
+
+  - **icons:** Add new folder icons for different categories Four new SVG icons have been added to the icons folder. Two of them represent closed folders, while the other two represent open folders. The folders are categorized into blog, course, and UI. The icons have been designed to be consistent with the existing icons in the folder. ([b995db3](https://github.com/nyxblabs/materialiconic/commit/b995db3))
+
+### 🏡 Chore
+
+  - **logo.png:** Update logo image The logo.png file has been updated, but no changes to the code have been made. This commit only updates the image file. ([ec28b7e](https://github.com/nyxblabs/materialiconic/commit/ec28b7e))
+  - **logo.svg:** Update logo image The logo.svg file has been updated, but no changes to the code have been made. This commit only updates the image file. ([b39ed41](https://github.com/nyxblabs/materialiconic/commit/b39ed41))
+
+### 🎨 Styles
+
+  - **icons:** Change folder open icon fill color from #0d9373 to #00cfff The fill color of the folder open icon has been changed from #0d9373 to #00cfff to improve consistency with the color scheme of the application. ([#0](https://github.com/nyxblabs/materialiconic/issues/0), [#00](https://github.com/nyxblabs/materialiconic/issues/00))
+  - **README.md:** Add badges for Visual Studio Code marketplace statistics This commit adds badges for Visual Studio Code marketplace statistics, including version, installs, ratings, and downloads. This provides users with more information about the extension's popularity and usage. ([d007890](https://github.com/nyxblabs/materialiconic/commit/d007890))
+
+### ❤️  Contributors
+
+- Nyxb <contact@nyxb.xyz>
+
 ## ...main
 
 
