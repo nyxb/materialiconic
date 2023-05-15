@@ -10,7 +10,7 @@
     "@next/next/no-html-link-for-pages": 0,
     "n/prefer-global/buffer": 0,
     "prefer-regex-literals": 0,
-    "unicorn/error-message": 0,
+    "unicorn/error-message": 0
   },
   "settings": {
     "react": {
