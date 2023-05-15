@@ -32,7 +32,7 @@ function fetchContributors(page: string): Promise<{ contributorsOfPage: Contribu
       const requestOptions: RequestOptions = {
          method: 'GET',
          hostname: 'api.github.com',
-         path: `/repos/nyxb/materialiconic/contributors?page=${page}`,
+         path: `/repos/nyxblabs/materialiconic/contributors?page=${page}`,
          port: 443,
          headers: {
             'link': 'next',

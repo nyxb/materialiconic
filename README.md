@@ -171,6 +171,9 @@ Press `Ctrl-Shift-P` to open the command palette and type `materialiconic`.
 
 Check out the [contribution guidelines](https://github.com/nyxb/materialiconic/blob/main/CONTRIBUTING.md) and open a [new issue](https://github.com/nyxb/materialiconic/issues) or [pull request](https://github.com/nyxb/materialiconic/pulls) on GitHub.
 
+## 🤝 Contributors
+[![contributors][contributors-src]][contributors-href]
+
 ## 🧩 Related extensions
 
 - [MaterialIconic for GitHub](https://github.com/nyxb/github-materialiconic-extension)
@@ -191,3 +194,5 @@ Check out the [contribution guidelines](https://github.com/nyxb/materialiconic/b
 [folderIcons-src]: https://raw.githubusercontent.com/nyxblabs/materialiconic/main/images/folderIcons.png
 [set-folder-color-src]: https://raw.githubusercontent.com/nyxblabs/materialiconic/main/images/set-folder-color.gif
 [set-folder-theme-src]: https://raw.githubusercontent.com/nyxblabs/materialiconic/main/images/set-folder-theme.gif
+[contributors-href]: https://github.com/nyxblabs/materialiconic/graphs/contributors
+[contributors-src]: https://raw.githubusercontent.com/nyxblabs/materialiconic/main/images/contributors.png
