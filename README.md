@@ -1,5 +1,9 @@
+
 [![cover][cover-src]][cover-href]
-[![npm version][npm-version-src]][npm-version-href]
+[![vscode version][vscode-version-src]][vscode-version-href]
+[![vscode ratings][vscode-ratings-src]][vscode-ratings-href]
+[![vscode installs][vscode-installs-src]][vscode-installs-href]
+[![vscode downloads][vscode-downloads-src]][vscode-downloads-href]
 [![License][license-src]][license-href]
 
 > 🌠🥳 A set of icons inspired by Material Design for Visual Studio Code
@@ -178,8 +182,19 @@ Check out the [contribution guidelines](https://github.com/nyxb/materialiconic/b
 
 - [MaterialIconic for GitHub](https://github.com/nyxb/github-materialiconic-extension)
 
-[npm-version-src]: https://img.shields.io/npm/v/materialiconic?style=flat&colorA=18181B&colorB=14F195
-[npm-version-href]: https://npmjs.com/package/materialiconic
+<!-- Badges -->
+
+[vscode-version-src]: https://img.shields.io/visual-studio-marketplace/v/nyxb.materialiconic?colorA=18181B&colorB=14F195&label=vscode%20version
+[vscode-version-href]: https://marketplace.visualstudio.com/items?itemName=nyxb.materialiconic
+
+[vscode-installs-src]: https://img.shields.io/visual-studio-marketplace/i/nyxb.materialiconic?colorA=18181B&colorB=14F195&label=vscode%20installs
+[vscode-installs-href]: https://marketplace.visualstudio.com/items?itemName=nyxb.materialiconic
+
+[vscode-ratings-src]: https://img.shields.io/visual-studio-marketplace/r/nyxb.materialiconic?colorA=18181B&colorB=14F195&label=vscode%20rating
+[vscode-ratings-href]: https://marketplace.visualstudio.com/items?itemName=nyxb.materialiconic
+
+[vscode-downloads-src]: https://img.shields.io/visual-studio-marketplace/d/nyxb.materialiconic?colorA=18181B&colorB=14F195&label=vscode%20downloads
+[vscode-downloads-href]: https://marketplace.visualstudio.com/items?itemName=nyxb.materialiconic
 
 [license-src]: https://img.shields.io/github/license/nyxblabs/materialiconic.svg?style=flat&colorA=18181B&colorB=14F195
 [license-href]: https://github.com/nyxblabs/materialiconic/blob/main/LICENSE
