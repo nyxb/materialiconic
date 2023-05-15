@@ -178,11 +178,11 @@ Check out the [contribution guidelines](https://github.com/nyxb/materialiconic/b
 [npm-version-src]: https://img.shields.io/npm/v/materialiconic?style=flat&colorA=18181B&colorB=14F195
 [npm-version-href]: https://npmjs.com/package/materialiconic
 
-[license-src]: https://img.shields.io/github/license/nyxb/materialiconic.svg?style=flat&colorA=18181B&colorB=14F195
-[license-href]: https://github.com/nyxb/materialiconic/blob/main/LICENSE
+[license-src]: https://img.shields.io/github/license/nyxblabs/materialiconic.svg?style=flat&colorA=18181B&colorB=14F195
+[license-href]: https://github.com/nyxblabs/materialiconic/blob/main/LICENSE
 
 <!-- Cover -->
-[cover-src]: https://raw.githubusercontent.com/nyxb/materialiconic/main/.github/assets/cover-github-materialiconic.png
+[cover-src]: https://raw.githubusercontent.com/nyxblabs/materialiconic/main/.github/assets/cover-github-materialiconic.png
 [cover-href]: https://💻nyxb.ws
 
 <!-- Images -->
