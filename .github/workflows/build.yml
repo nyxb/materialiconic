@@ -19,7 +19,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: ⚙️ Setup PNPM
+      - name: ⚙️ Setup PNPM - Windows
+        if: matrix.os == 'windows-latest'
+        run: |
+          npm install -g pnpm
+          echo "PNPM installed"
+      - name: ⚙️ Setup PNPM - Linux
+        if: matrix.os == 'ubuntu-latest'
         uses: pnpm/action-setup@v2
         with:
           version: latest
