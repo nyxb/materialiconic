@@ -1,0 +1,20 @@
+{
+  "extends": ["@nyxb"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "promise/param-names": 0,
+    "@next/next/no-html-link-for-pages": 0,
+    "n/prefer-global/buffer": 0,
+    "prefer-regex-literals": 0,
+    "unicorn/error-message": 0,
+  },
+  "settings": {
+    "react": {
+      "version": "16.0"
+    }
+  }
+}

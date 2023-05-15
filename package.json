@@ -1,0 +1,266 @@
+{
+  "name": "materialiconic",
+  "displayName": "MaterialIconic",
+  "description": "🎨✨ Icon Set inspired by Material Design for Visual Studio Code",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "nyxr compile:dev && nyxr generateJson",
+    "check": "dynot ./src/scripts/icons/checks",
+    "compile": "webpack --config ./build/webpack.config.js --mode production",
+    "compile:dev": "webpack --config ./build/webpack.config.js --mode none",
+    "compile:watch": "webpack --config ./build/webpack.config.js --mode none --watch",
+    "compile-web": "webpack --config ./build/web-extension.webpack.config.js",
+    "watch-web": "webpack --watch --config ./build/web-extension.webpack.config.js",
+    "package-web": "webpack --mode production --devtool hidden-source-map --config ./build/web-extension.webpack.config.js",
+    "contributors": "dynot ./src/scripts/contributors/index.ts",
+    "generateJson": "dynot ./src/scripts/icons/generateJson.ts",
+    "lint": "eslint -c .eslintrc --ext .ts ./src/**/*.ts",
+    "lint:fix": "eslint -c .eslintrc --ext .ts ./src/**/*.ts --fix",
+    "postcompile": "nyxr generateJson && nyxr check",
+    "pretest": "nyxr build && tsc -p ./",
+    "preview": "dynot ./src/scripts/preview",
+    "svgo": "svgo -i icons -o icons -q",
+    "test": "node ./out/test/runTest.js",
+    "changelog": "nyxlx changelogen@latest --output",
+    "preversion": "nyxr contributors && git add images/contributors.png && nyxr preview && git add images/fileIcons.png && git add images/folderIcons.png",
+    "version": "nyxr changelog && git add CHANGELOG.md",
+    "vscode:prepublish": "nyxr lint && nyxr compile && nyxr package-web"
+  },
+  "publisher": "nyxb",
+  "author": {
+    "name": "Dennis Ollhoff",
+    "email": "contact@nyxb.xyz",
+    "url": "https://💻nyxb.ws"
+  },
+  "funding": "https://github.com/sponsors/nyxb",
+  "sponsor": {
+    "url": "https://github.com/sponsors/nyxb"
+  },
+  "engines": {
+    "vscode": "^1.51.0"
+  },
+  "homepage": "https://github.com/nyxblabs/materialiconic/blob/main/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nyxblabs/materialiconic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nyxblabs/materialiconic/issues"
+  },
+  "icon": "logo.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "icons",
+    "theme",
+    "material",
+    "icon-theme",
+    "customization"
+  ],
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension",
+  "browser": "./dist/web/extension.js",
+  "sideEffects": false,
+  "files": [
+    "icons",
+    "dist/material-icons.json"
+  ],
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "materialiconic",
+        "label": "MaterialIconic",
+        "path": "./dist/material-icons.json",
+        "_watch": true
+      }
+    ],
+    "commands": [
+      {
+        "command": "materialiconic.activateIcons",
+        "title": "%command.activateIcons%",
+        "enablement": "!isWeb"
+      },
+      {
+        "command": "materialiconic.toggleIconPacks",
+        "title": "%command.toggleIconPacks%",
+        "enablement": "!isWeb"
+      },
+      {
+        "command": "materialiconic.changeFolderTheme",
+        "title": "%command.changeFolderTheme%",
+        "enablement": "!isWeb"
+      },
+      {
+        "command": "materialiconic.changeFolderColor",
+        "title": "%command.changeFolderColor%",
+        "enablement": "!isWeb"
+      },
+      {
+        "command": "materialiconic.changeFileColor",
+        "title": "%command.changeFileColor%",
+        "enablement": "!isWeb"
+      },
+      {
+        "command": "materialiconic.restoreDefaultConfig",
+        "title": "%command.restoreDefaultConfig%",
+        "enablement": "!isWeb"
+      },
+      {
+        "command": "materialiconic.toggleExplorerArrows",
+        "title": "%command.toggleExplorerArrows%",
+        "enablement": "!isWeb"
+      },
+      {
+        "command": "materialiconic.changeOpacity",
+        "title": "%command.changeOpacity%",
+        "enablement": "!isWeb"
+      },
+      {
+        "command": "materialiconic.toggleGrayscale",
+        "title": "%command.toggleGrayscale%",
+        "enablement": "!isWeb"
+      },
+      {
+        "command": "materialiconic.changeSaturation",
+        "title": "%command.changeSaturation%",
+        "enablement": "!isWeb"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "%configuration.title%",
+      "properties": {
+        "materialiconic.activeIconPack": {
+          "type": "string",
+          "default": "angular",
+          "description": "%configuration.activeIconPack%",
+          "enumDescriptions": [
+            "%configuration.activeIconPack.angular%",
+            "%configuration.activeIconPack.angular_ngrx%",
+            "%configuration.activeIconPack.react%",
+            "%configuration.activeIconPack.react_redux%",
+            "%configuration.activeIconPack.qwik%",
+            "%configuration.activeIconPack.vue%",
+            "%configuration.activeIconPack.vue_vuex%",
+            "%configuration.activeIconPack.nest%",
+            "%configuration.activeIconPack.none%"
+          ],
+          "enum": [
+            "angular",
+            "angular_ngrx",
+            "react",
+            "react_redux",
+            "qwik",
+            "vue",
+            "vue_vuex",
+            "nest",
+            "none"
+          ]
+        },
+        "materialiconic.files.associations": {
+          "type": "object",
+          "default": {},
+          "description": "%configuration.files.associations%"
+        },
+        "materialiconic.folders.associations": {
+          "type": "object",
+          "default": {},
+          "description": "%configuration.folders.associations%"
+        },
+        "materialiconic.languages.associations": {
+          "type": "object",
+          "default": {},
+          "description": "%configuration.languages.associations%"
+        },
+        "materialiconic.folders.theme": {
+          "type": "string",
+          "default": "specific",
+          "description": "%configuration.folders.theme%",
+          "enumDescriptions": [
+            "%configuration.folders.theme.specific%",
+            "%configuration.folders.theme.classic%",
+            "%configuration.folders.theme.none%"
+          ],
+          "enum": [
+            "specific",
+            "classic",
+            "none"
+          ]
+        },
+        "materialiconic.folders.color": {
+          "type": "string",
+          "default": "#90a4ae",
+          "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+          "description": "%configuration.folders.color%"
+        },
+        "materialiconic.files.color": {
+          "type": "string",
+          "default": "#90a4ae",
+          "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+          "description": "%configuration.files.color%"
+        },
+        "materialiconic.opacity": {
+          "type": "number",
+          "default": 1,
+          "minimum": 0,
+          "maximum": 1,
+          "description": "%configuration.opacity%"
+        },
+        "materialiconic.hidesExplorerArrows": {
+          "type": "boolean",
+          "default": false,
+          "description": "%configuration.hidesExplorerArrows%"
+        },
+        "materialiconic.saturation": {
+          "type": "number",
+          "default": 1,
+          "minimum": 0,
+          "maximum": 1,
+          "description": "%configuration.saturation%"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "lodash.merge": "4.6.2"
+  },
+  "devDependencies": {
+    "@nyxb/eslint-config": "^0.0.53",
+    "@types/glob": "^7.2.0",
+    "@types/lodash.merge": "^4.6.7",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^17.0.35",
+    "@types/puppeteer": "^5.4.6",
+    "@types/vscode": "~1.51.0",
+    "@vscode/test-electron": "^2.3.2",
+    "consolji": "^0.1.4",
+    "dynot": "^0.1.8",
+    "eslint": "^8.40.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "puppeteer": "^14.1.1",
+    "rimraf": "^3.0.2",
+    "svgo": "^2.8.0",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.7.2",
+    "webpack": "^5.71.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
