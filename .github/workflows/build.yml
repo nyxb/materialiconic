@@ -15,37 +15,34 @@ jobs:
     steps:
       - name: 🚨 Checkout
         uses: actions/checkout@v3
-
       - name: Setup Node.js ${{ matrix.node-version }} ⚙
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-
-      - name: ⚙️ Setup PNPM and install @nyxb/nyxi
-        run: |
-          pnpm install -g @nyxb/nyxi
-          nyxi --version
-
+      - name: ⚙️ Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+      - name: ⚙️ Install @nyxb/nyxi
+        run: pnpm install -g @nyxb/nyxi
       - name: 🖥️ Run display server
         run: /usr/bin/Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 & echo "Started xvfb"
         shell: bash
         if: ${{ success() && matrix.os == 'ubuntu-latest' }}
-
       - name: 📦 Install node_modules
         run: pnpm install --frozen-lockfile
-
       - name: 💾 Cache node_modules
         uses: actions/cache@v3
         env:
           cache-name: cache-node-modules
         with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
           path: ~/.pnpm-store
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-
       - name: 🚀 Test + Build
         run: |
           pnpm test
