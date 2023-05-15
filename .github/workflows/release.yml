@@ -52,7 +52,7 @@ jobs:
           NODE_DISPLAY_NAME=$(node -p -e "require('./package.json').displayName")
           echo DISPLAY_NAME=$NODE_DISPLAY_NAME >> $GITHUB_ENV
       - name: ⚒️ Build
-        run: vsce package
+        run: vsce package --no-dependencies
       - name: 📌 Push tags
         run: git push
       - name: 🔆 Release ${{ env.VERSION }}
