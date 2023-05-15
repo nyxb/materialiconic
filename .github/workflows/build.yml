@@ -16,6 +16,13 @@ jobs:
       - name: 🚨 Checkout
         uses: actions/checkout@v3
       - name: Setup Node.js ${{ matrix.node-version }} ⚙
+        if: matrix.os == 'windows-latest'
+        run: |
+          curl -sL https://nodejs.org/dist/latest/node-v${{ matrix.node-version }}-x64.msi -o node.msi
+          start /wait node.msi
+          echo "Node.js installed"
+      - name: Setup Node.js ${{ matrix.node-version }} ⚙ - Linux
+        if: matrix.os == 'ubuntu-latest'
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
