@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.0.3...main
+
+[compare changes](https://github.com/nyxblabs/materialiconic/compare/v0.0.3...main)
+
+
+### 🏡 Chore
+
+  - **package.json:** Add generateJson script to vscode:prepublish script The generateJson script was added to the vscode:prepublish script to generate the necessary JSON files for the extension to work properly. This improves the build process and ensures that the extension is fully functional. ([46bbae9](https://github.com/nyxblabs/materialiconic/commit/46bbae9))
+
+### ❤️  Contributors
+
+- Nyxb <contact@nyxb.xyz>
+
 ## v0.0.2...main
 
 [compare changes](https://github.com/nyxblabs/materialiconic/compare/v0.0.2...main)
