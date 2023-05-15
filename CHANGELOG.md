@@ -1,0 +1,31 @@
+# Changelog
+
+
+## ...main
+
+
+### 🩹 Fixes
+
+  - **README.md:** Update license badge URL to point to the correct repository The license badge URL was pointing to the wrong repository, which could cause confusion for users. The URL has been updated to point to the correct repository. ([6b31585](https://github.com/nyxblabs/materialiconic/commit/6b31585))
+  - **build.yml): remove manual installation of PNPM on Windows ✨ feat(build.yml:** Add environment variables to support running tests on Ubuntu with Xvfb The manual installation of PNPM on Windows is no longer necessary as the pnpm/action-setup@v2 action now supports Windows. The environment variables DISPLAY, CI, and DEBUG are added to support running tests on Ubuntu with Xvfb. This allows the tests to run in a headless environment, which is necessary for the tests to pass. ([8384270](https://github.com/nyxblabs/materialiconic/commit/8384270))
+  - **build.yml:** Add separate steps for setting up PNPM on Windows and Linux The build workflow now has separate steps for setting up PNPM on Windows and Linux. This is necessary because the installation process for PNPM is different on these two operating systems. The new steps ensure that PNPM is installed correctly on both Windows and Linux, which will prevent build failures due to missing dependencies. ([742adb4](https://github.com/nyxblabs/materialiconic/commit/742adb4))
+  - **build.yml): add conditional step to install Node.js on Windows ✨ feat(build.yml:** Add conditional step to install Node.js on Ubuntu The conditional step to install Node.js on Windows was added to the build workflow. This is necessary because the Windows environment requires a different installation process than the Ubuntu environment. The conditional step to install Node.js on Ubuntu was also added to the build workflow to ensure that the correct version of Node.js is installed on the Ubuntu environment. ([eec242b](https://github.com/nyxblabs/materialiconic/commit/eec242b))
+  - **contributors): fix typo in path to fetch contributors from GitHub API 🚀 chore(contributors:** Update contributors list in README.md The path to fetch contributors from the GitHub API was incorrect due to a typo in the repository name. This has been fixed to point to the correct repository. The contributors list in the README.md file has been updated to reflect the latest contributors. ([7a7fe40](https://github.com/nyxblabs/materialiconic/commit/7a7fe40))
+  - **release.yml:** Add --no-dependencies flag to vsce package command The --no-dependencies flag is added to the vsce package command to prevent the inclusion of unnecessary dependencies in the package. This reduces the package size and improves the installation time of the extension. ([f3e436c](https://github.com/nyxblabs/materialiconic/commit/f3e436c))
+
+### 🏡 Chore
+
+  - **build.yml:** Add echo steps to build workflow for better visibility Added echo steps to the build workflow to improve visibility and make it easier to track the progress of the workflow. The echo steps are added after each major step in the workflow, such as checkout, node setup, PNPM setup, display server setup, node modules installation, caching, and test + build. ([cf081f9](https://github.com/nyxblabs/materialiconic/commit/cf081f9))
+  - **build.yml:** Refactor build workflow to remove unnecessary echo commands and add conditional installation of PNPM The workflow has been refactored to remove unnecessary echo commands that were used for debugging purposes. PNPM installation is now conditional based on the operating system. PNPM is automatically installed on Ubuntu, but on Windows, it needs to be manually installed. ([23ec5f9](https://github.com/nyxblabs/materialiconic/commit/23ec5f9))
+  - **build.yml:** Remove redundant environment variables and platform-specific setup steps The environment variables CI and DEBUG are not needed for the installation of node_modules and are removed. The platform-specific setup steps for Node.js and PNPM are also removed as the same setup can be used for both Windows and Linux. ([7ac3af1](https://github.com/nyxblabs/materialiconic/commit/7ac3af1))
+  - **build.yml:** Add pretest script to run before tests The pretest script is added to the build workflow to run before the tests. This script is used to perform any necessary setup or configuration before running the tests. ([f010669](https://github.com/nyxblabs/materialiconic/commit/f010669))
+  - **build.yml): update build workflow to install and use @nyxb/nyxi for display server 🚀 feat(build.yml:** Add @nyxb/nyxi to the build workflow to improve display server reliability The build workflow has been updated to install and use @nyxb/nyxi for the display server. This improves the reliability of the display server and ensures that the tests run smoothly. ([c9f3ac9](https://github.com/nyxblabs/materialiconic/commit/c9f3ac9))
+  - **build.yml:** Update build workflow to use pnpm v2 and cache node_modules in ~/.pnpm-store The build workflow has been updated to use pnpm v2 and cache node_modules in the ~/.pnpm-store directory. This improves the build time and reduces the amount of data that needs to be downloaded during the build process. The @nyxb/nyxi package is now installed using pnpm instead of globally installing it using nyxi. The display server is now started only on the ubuntu-latest operating system. ([51aaa95](https://github.com/nyxblabs/materialiconic/commit/51aaa95))
+  - **build.yml:** Add pretest script to run before tests The pretest script is added to the build workflow to ensure that the tests run smoothly. This script will be executed before running the tests to ensure that the environment is set up correctly. ([5c9e418](https://github.com/nyxblabs/materialiconic/commit/5c9e418))
+  - **release.yml:** Add step to install @nyxb/nyxi globally The @nyxb/nyxi package is installed globally to be able to use it in the release process. ([8c9209d](https://github.com/nyxblabs/materialiconic/commit/8c9209d))
+  - **.eslintrc:** Remove trailing comma in rules object The trailing comma in the rules object was removed to improve consistency with the rest of the file. ([2cbf784](https://github.com/nyxblabs/materialiconic/commit/2cbf784))
+
+### ❤️  Contributors
+
+- Nyxb <contact@nyxb.xyz>
+
