@@ -11,6 +11,18 @@ export const folderIcons: FolderTheme[] = [
       rootFolder: { name: 'folder-root' },
       icons: [
          {
+            name: 'folder-ui',
+            folderNames: ['ui'],
+         },
+         {
+            name: 'folder-course',
+            folderNames: ['course', 'courses', 'lesson', 'lessons'],
+         },
+         {
+            name: 'folder-blog',
+            folderNames: ['blog', 'blogs', 'article', 'articles'],
+         },
+         {
             name: 'folder-discord',
             folderNames: ['discord', 'discordapp'],
          },
