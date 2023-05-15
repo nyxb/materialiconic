@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.0.5...main
+
+[compare changes](https://github.com/nyxblabs/materialiconic/compare/v0.0.5...main)
+
+
+### 🩹 Fixes
+
+  - **folderIcons.ts:** Set 'ISSUE_TEMPLATE','PULL_REQUEST_TEMPLATE','workflows', on the right place ([c9b8e20](https://github.com/nyxblabs/materialiconic/commit/c9b8e20))
+
+### ❤️  Contributors
+
+- Dennis Ollhoff <contact@nyxb.xyz>
+
 ## v0.0.4...main
 
 [compare changes](https://github.com/nyxblabs/materialiconic/compare/v0.0.4...main)
