@@ -15,35 +15,60 @@ jobs:
     steps:
       - name: 🚨 Checkout
         uses: actions/checkout@v3
+
+      - name: Echo after checkout
+        run: echo "Checkout completed"
+
       - name: Setup Node.js ${{ matrix.node-version }} ⚙
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+
+      - name: Echo after Node setup
+        run: echo "Node setup completed"
+
       - name: ⚙️ Setup PNPM
         uses: pnpm/action-setup@v2
         with:
           version: latest
+
+      - name: Echo after PNPM setup
+        run: echo "PNPM setup completed"
+
       - name: 🖥️ Run display server
         run: /usr/bin/Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 & echo "Started xvfb"
         shell: bash
         if: ${{ success() && matrix.os == 'ubuntu-latest' }}
+
+      - name: Echo after display server setup
+        run: echo "Display server setup completed"
+        if: ${{ success() && matrix.os == 'ubuntu-latest' }}
+
       - name: 📦 Install node_modules
         run: pnpm install --frozen-lockfile
+
+      - name: Echo after node modules installed
+        run: echo "Node modules installed"
+
       - name: 💾 Cache node_modules
         uses: actions/cache@v3
         env:
           cache-name: cache-node-modules
         with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
           path: ~/.pnpm-store
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+
+      - name: Echo after caching
+        run: echo "Node modules cached"
+
       - name: 🚀 Test + Build
         run: |
           pnpm test
           pnpm run vscode:prepublish
-        env:
-          DISPLAY: ':99.0'
+
+      - name: Echo after Test + Build
+        run: echo "Test + Build completed"
