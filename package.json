@@ -24,7 +24,7 @@
     "changelog": "nyxlx changelogen@latest --output",
     "preversion": "nyxr contributors && git add images/contributors.png && nyxr preview && git add images/fileIcons.png && git add images/folderIcons.png",
     "version": "nyxr changelog && git add CHANGELOG.md",
-    "vscode:prepublish": "nyxr lint && nyxr compile && nyxr package-web"
+    "vscode:prepublish": "nyxr lint && nyxr compile && nyxr generateJson && nyxr package-web"
   },
   "publisher": "nyxb",
   "author": {
