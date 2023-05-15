@@ -43,6 +43,7 @@ jobs:
             ${{ runner.os }}-
       - name: 🚀 Test + Build
         run: |
+          pnpm run pretest
           pnpm test
           pnpm run vscode:prepublish
         env:
