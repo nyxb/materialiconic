@@ -18,19 +18,21 @@ jobs:
     env:
       VERSION_CHANGE: ${{ github.event.inputs.versionChange }}
     steps:
-      - name: Checkout 🛎️
+      - name: 🛎️ Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Setup Node.js ⚙️
+      - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
           registry-url: 'https://registry.npmjs.org'
-      - name: Setup PNPM ⚙️
+      - name: ⚙️ Setup PNPM
         uses: pnpm/action-setup@v2
         with:
           version: latest
+      - name: ⚙️ Install @nyxb/nyxi
+        run: pnpm install -g @nyxb/nyxi
       - name: 📦 Install node_modules
         run: |
           pnpm install --frozen-lockfile
