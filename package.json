@@ -2,7 +2,7 @@
   "name": "materialiconic",
   "displayName": "MaterialIconic",
   "description": "🎨✨ Icon Set inspired by Material Design for Visual Studio Code",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "build": "nyxr compile:dev && nyxr generateJson",
     "check": "dynot ./src/scripts/icons/checks",

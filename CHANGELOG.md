@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v0.0.4...main
+
+[compare changes](https://github.com/nyxblabs/materialiconic/compare/v0.0.4...main)
+
+
+### 🏡 Chore
+
+  - **logo.png:** Update logo image The logo.png file has been updated, but no changes were made to the code. This commit is purely cosmetic and updates the logo image. ([884f9f2](https://github.com/nyxblabs/materialiconic/commit/884f9f2))
+  - **logo.svg:** Update logo image The logo.svg file has been updated, but no changes were made to the code. This commit is purely cosmetic and updates the logo image. ([a8e3250](https://github.com/nyxblabs/materialiconic/commit/a8e3250))
+
+### 🎨 Styles
+
+  - **folderIcons.ts:** Add new folder names to folderIcons Added new folder names to the folderIcons array to include ISSUE_TEMPLATE, PULL_REQUEST_TEMPLATE, and workflows. This improves the consistency of the folder icons and makes it easier to identify these folders in the file explorer. ([3c330aa](https://github.com/nyxblabs/materialiconic/commit/3c330aa))
+
+### ❤️  Contributors
+
+- Nyxb <contact@nyxb.xyz>
+
 ## v0.0.3...main
 
 [compare changes](https://github.com/nyxblabs/materialiconic/compare/v0.0.3...main)
