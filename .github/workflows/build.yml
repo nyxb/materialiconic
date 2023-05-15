@@ -15,29 +15,23 @@ jobs:
     steps:
       - name: 🚨 Checkout
         uses: actions/checkout@v3
-
       - name: Setup Node.js ${{ matrix.node-version }} ⚙
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          
       - name: ⚙️ Setup PNPM
-        if: matrix.os == 'ubuntu-latest'
         uses: pnpm/action-setup@v2
         with:
           version: latest
-
-      - name: ⚙️ Manually install PNPM
-        if: matrix.os == 'windows-latest'
-        run: npm install -g pnpm
-
       - name: 🖥️ Run display server
-        if: matrix.os == 'ubuntu-latest'
-        run: /usr/bin/Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-
+        run: /usr/bin/Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 & echo "Started xvfb"
+        shell: bash
+        if: ${{ success() && matrix.os == 'ubuntu-latest' }}
       - name: 📦 Install node_modules
         run: pnpm install --frozen-lockfile
-
+        env:
+          CI: true
+          DEBUG: "*"
       - name: 💾 Cache node_modules
         uses: actions/cache@v3
         env:
@@ -49,8 +43,11 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-
       - name: 🚀 Test + Build
         run: |
           pnpm test
           pnpm run vscode:prepublish
+        env:
+          DISPLAY: ':99.0'
+          CI: true
+          DEBUG: "*"
