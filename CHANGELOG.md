@@ -1,6 +1,20 @@
 # Changelog
 
 
+## v0.0.6...main
+
+[compare changes](https://github.com/nyxblabs/materialiconic/compare/v0.0.6...main)
+
+
+### 🎨 Styles
+
+  - **CHANGELOG.md): add missing space between sections 🖼️ chore(images:** Update fileIcons.png and folderIcons.png The CHANGELOG.md file was updated to add a missing space between sections to improve readability. The images folder was updated with new versions of fileIcons.png and folderIcons.png. ([82d4aa2](https://github.com/nyxblabs/materialiconic/commit/82d4aa2))
+  - **fileIcons.ts): add new icons for kolibry and kolitest configuration files 🖼️ add(kolibry.svg): add new icon for kolibry configuration files 🖼️ add(kolitest.svg:** Add new icon for kolitest configuration files The commit adds two new icons for kolibry and kolitest configuration files. The icons are added to the fileIcons.ts file, and the corresponding SVG files are added to the icons directory. This improves the visual representation of the configuration files and makes it easier to identify them in the project. ([597e2a1](https://github.com/nyxblabs/materialiconic/commit/597e2a1))
+
+### ❤️  Contributors
+
+- Nyxb <contact@nyxb.xyz>
+
 ## v0.0.6...v0.0.6
 
 [compare changes](https://github.com/nyxblabs/materialiconic/compare/v0.0.6...v0.0.6)
