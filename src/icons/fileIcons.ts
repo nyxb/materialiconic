@@ -8,6 +8,28 @@ export const fileIcons: FileIcons = {
    defaultIcon: { name: 'file' },
    icons: [
       {
+         name: 'kolibry',
+         fileNames: [
+            'kolibry.config.js',
+            'kolibry.config.mjs',
+            'kolibry.config.cjs',
+            'kolibry.config.ts',
+            'kolibry.config.cts',
+            'kolibry.config.mts',
+         ],
+      },
+      {
+         name: 'kolitest',
+         fileNames: [
+            'kolitest.config.ts',
+            'kolitest.config.mts',
+            'kolitest.config.cts',
+            'kolitest.config.js',
+            'kolitest.config.mjs',
+            'kolitest.config.cjs',
+         ],
+      },
+      {
          name: 'swc',
          fileNames: [
             '.swcrc',
