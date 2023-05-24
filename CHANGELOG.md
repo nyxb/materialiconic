@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v0.0.6...v0.0.6
+
+[compare changes](https://github.com/nyxblabs/materialiconic/compare/v0.0.6...v0.0.6)
+
 ## v0.0.5...main
 
 [compare changes](https://github.com/nyxblabs/materialiconic/compare/v0.0.5...main)
